@@ -19,3 +19,4 @@ Outra linguagem que estava aplicada a este PSet é esta, muito mais simples do q
 
 #### Power Architect
 O Power Architect é um programa onde cria o modelo logico do Elmasri, e usando de base esse modelo implementei no banco de dados usando as linguagem aprendidas.
+'[Power Architect](https://github.com/yAnzmerr/uvv_bd_1_cc1m/blob/main/pset1/PA.png)
