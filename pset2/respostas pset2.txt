@@ -1,0 +1,91 @@
+questão 1--
+select numero_departamento, round(avg(salario)) as media_salarial from funcionario group by numero_departamento;
+
+questão 2--
+select sexo, avg(salario) as media_salarial from funcionario group by sexo;
+
+questao 3--
+select departamento.nome_departamento,concat(primeiro_nome,' ',nome_meio ,' ',ultimo_nome) as nome_funcionario,data_nascimento,age(data_nascimento, current_date) as idade,salario
+from funcionario
+inner join departamento
+on funcionario.numero_departamento = departamento.numero_departamento;
+
+questao 4--
+select concat(
+primeiro_nome,' ',
+nome_meio,' ',
+ultimo_nome) as Nome,age(data_nascimento, current_date) as idade,
+salario,
+case
+  when salario < 35000 then salario * 1.20 
+  when salario > 35000 then salario * 1.15
+end "Reajuste"
+from funcionario;
+
+questao 5--
+select nome_departamento,
+case
+when funcionario.cpf = departamento.cpf_gerente then 'gerente'
+else 'funcionario'
+end as cargo,
+concat(primeiro_nome,' ',nome_meio,' ',ultimo_nome) as nome,
+salario
+from departamento, funcionario
+where departamento.numero_departamento = funcionario.numero_departamento
+order by nome_departamento,
+salario desc;
+
+questao 6--
+select  
+primeiro_nome as nome_funcionario,
+numero_departamento,
+dependente.nome_dependente,
+age(dependente.data_nascimento, current_date) as idade_dependente,
+case
+ when dependente.sexo = 'M' then 'masculino'
+else 'feminino'end "sexo_dependente"
+from funcionario
+inner join dependente
+on funcionario.cpf = dependente.cpf_funcionario;
+
+questão 7--
+SELECT CONCAT(primeiro_nome,' ',nome_meio,' ',ultimo_nome) as Nome_completo, numero_departamento AS Numero_departamento, salario
+FROM funcionario 
+INNER JOIN dependente 
+ON cpf = cpf_funcionario
+group BY cpf;
+
+questão 8--
+SELECT numero_departamento, numero_projeto, CONCAT(funcionario.primeiro_nome,' ', funcionario.nome_meio,' ', funcionario.ultimo_nome) as nome_completo, horas
+FROM funcionario
+inner join trabalha_em on funcionario.cpf = trabalha_em.cpf_funcionario;
+
+questão 9--
+select nome_departamento,
+nome_projeto,
+sum(horas) as total_horas
+from departamento, projeto, trabalha_em
+where departamento.numero_departamento = projeto.numero_departamento
+and projeto.numero_projeto = trabalha_em.numero_projeto
+group by nome_departamento, nome_projeto
+order by nome_departamento;
+
+questão 10--
+select numero_departamento, avg(salario) as media_salarial from funcionario group by numero_departamento;
+
+questão 11--
+select nome_departamento,
+nome_projeto,
+sum(horas) as total_horas
+from departamento, projeto, trabalha_em
+where departamento.numero_departamento = projeto.numero_departamento
+and projeto.numero_projeto = trabalha_em.numero_projeto
+group by nome_departamento, nome_projeto
+order by nome_departamento;
+
+questão 12--
+
+questão 13--
+
+
+
