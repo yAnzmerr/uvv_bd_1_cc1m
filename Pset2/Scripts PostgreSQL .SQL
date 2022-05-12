@@ -37,7 +37,7 @@ SELECT nome_departamento,
 CASE
 WHEN funcionario.cpf = departamento.cpf_gerente then 'gerente'
 ELSE 'funcionario'
-AND as cargo,
+END as cargo,
 CONCAT(primeiro_nome,' ',
 nome_meio,' ',
 ultimo_nome) AS nome,
