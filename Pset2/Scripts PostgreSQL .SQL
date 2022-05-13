@@ -1,3 +1,9 @@
+/*Abra o terminal*/
+/*Usar o comando no terminal para acessar o postgreSQL com o usuário criado*/
+psql -U yan uvv
+
+/*Logado e conectado no banco de dados criado anteriormente*/
+
 
 /*questão 1*/
 SELECT numero_departamento, round(avg(salario)) AS media_salarial 
