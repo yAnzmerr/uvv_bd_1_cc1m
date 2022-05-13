@@ -6,3 +6,6 @@
 * Aqui você encontrará os scripts que eu usei para resolver as 15 questões que estão contidas neste Pset.
 *  Este Pset consiste em nos ensinar a consultar o banco de dados criado no Pset1 em uma linguagem especifica que o professor deixo a critério do aluno, linguagem escolhida por mim é a PostgreSQL.
 
+###Questões:
+![Questões 1 a 8](https://github.com/yAnzmerr/uvv_bd_1_cc1m/blob/main/Pset2/Quest%C3%B5es%201%20a%208.png)
+![Questões 9 a 15](https://github.com/yAnzmerr/uvv_bd_1_cc1m/blob/main/Pset2/Quest%C3%B5es%209%20a%2015.png)
