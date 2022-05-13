@@ -8,4 +8,5 @@
 
 ###Questões:
 ![Questões 1 a 8](https://github.com/yAnzmerr/uvv_bd_1_cc1m/blob/main/Pset2/Quest%C3%B5es%201%20a%208.png)
+
 ![Questões 9 a 15](https://github.com/yAnzmerr/uvv_bd_1_cc1m/blob/main/Pset2/Quest%C3%B5es%209%20a%2015.png)
