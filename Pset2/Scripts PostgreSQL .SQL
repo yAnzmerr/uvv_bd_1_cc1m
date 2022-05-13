@@ -108,14 +108,16 @@ FROM funcionario
 GROUP BY numero_departamento;
 
 /*questão 11*/
-SELECT nome_departamento,
+SELECT CONCAT(primeiro_nome, ' ', 
+nome_meio, ' ', 
+ultimo_nome) 
+AS nome_completo,
 nome_projeto,
-SUM(horas) AS total_horas
-FROM departamento, projeto, trabalha_em
-WHERE departamento.numero_departamento = projeto.numero_departamento
-AND projeto.numero_projeto = trabalha_em.numero_projeto
-GROUP BY nome_departamento, nome_projeto
-ORDER BY nome_departamento;
+horas*50 AS salario_50_por_h
+FROM funcionario, projeto, trabalha_em 
+WHERE projeto.numero_projeto = trabalha_em.numero_projeto
+AND funcionario.cpf = trabalha_em.cpf_funcionario 
+ORDER BY nome_projeto;
 
 /*questão 12*/
 SELECT DISTINCT nome_departamento, nome_projeto, primeiro_nome, horas
