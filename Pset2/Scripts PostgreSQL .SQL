@@ -113,7 +113,7 @@ nome_meio, ' ',
 ultimo_nome) 
 AS nome_completo,
 nome_projeto,
-horas*50 AS salario_50_por_h
+horas*50 AS recebeu
 FROM funcionario, projeto, trabalha_em 
 WHERE projeto.numero_projeto = trabalha_em.numero_projeto
 AND funcionario.cpf = trabalha_em.cpf_funcionario 
